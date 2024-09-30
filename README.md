@@ -8,27 +8,31 @@ It is useful for training on GPUs with large VRAM like A10G, A100, H100 etc. You
 ## How to deploy
 
 1. Signup for Modal Labs
-2. Create HF_TOKEN with write access to HuggingFace
-3. Add it to Modal secrets under `huggingface-secret`
-4. Deploy the app
+2. Create hugging face token with **write** access to HuggingFace
+3. Add token to env variable under the name `HF_TOKEN` to Modal secrets. Use the name `huggingface-secret` for secret
+4. Deploy the app using below commands
 
 ```sh
-# create virtual env (Optional)
+# 1. create virtual env (Optional)
 python -m venv .venv
 source .venv/bin/activate
 
-# install modal
+# 2. install modal
 pip install modal
 
-# setup modal - one time setup
+# 3. setup modal - one time setup
 modal setup
 
-# run the app
+# 4. deploy the app
 modal deploy src/app.py
 ```
 
 ## Training
 
 1. Open the app URL in the browser
-2. Upload your dataset, add keywords, configure training parameters and train your LoRA
+2. Name your LoRA, add trigger keyword, upload your dataset, configure training parameters and start training
 3. Once training is complete, your LoRA will be saved to HuggingFace repo
+
+## Training tips
+
+If you want to use advanced options during the training, you can refer to this [config](https://github.com/ostris/ai-toolkit/blob/main/config/examples/train_lora_flux_24gb.yaml) on ai-toolkit
