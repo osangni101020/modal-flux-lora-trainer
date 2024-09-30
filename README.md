@@ -33,6 +33,6 @@ modal deploy src/app.py
 2. Name your LoRA, add trigger keyword, upload your dataset, configure training parameters and start training
 3. Once training is complete, your LoRA will be saved to HuggingFace repo
 
-## Training tips
+## Training config
 
 If you want to use advanced options during the training, you can refer to this [config](https://github.com/ostris/ai-toolkit/blob/main/config/examples/train_lora_flux_24gb.yaml) on ai-toolkit
