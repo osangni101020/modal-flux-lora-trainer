@@ -5,6 +5,10 @@ No need to setup anything. Just deploy the app and train your LoRA from the UI.
 
 It is useful for training on GPUs with large VRAM like A10G, A100, H100 etc. You can checkout the GPU pricing [here](https://modal.com/pricing).
 
+## Demo
+
+[![Video](./youtube-video.gif)](https://www.youtube.com/watch?v=qAXAkSniSKs)
+
 ## How to deploy
 
 1. Signup for Modal Labs
