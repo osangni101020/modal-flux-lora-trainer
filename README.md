@@ -13,12 +13,15 @@ It is useful for training on GPUs with large VRAM like A10G, A100, H100 etc. You
 4. Deploy the app
 
 ```sh
-# activate virtual env
+# create virtual env (Optional)
 python -m venv .venv
 source .venv/bin/activate
 
-# install requirements
-pip install -r requirements.txt
+# install modal
+pip install modal
+
+# setup modal - one time setup
+modal setup
 
 # run the app
 modal deploy src/app.py
