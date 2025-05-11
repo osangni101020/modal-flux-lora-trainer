@@ -20,7 +20,7 @@ app = App(
 
 
 @app.cls(
-    gpu="A100",
+    gpu="H100",
     image=image,
     concurrency_limit=1,
     timeout=7200,  # Default is 2 hrs,change it based on your needs
